@@ -16,12 +16,6 @@ export const DoneButton = ({
     <View style={styles.btnContainer}>
       <Animated.View style={[styles.full, { height: 0 }, {
         opacity: doneFadeOpacity,
-        transform: [{
-          translateX: skipFadeOpacity.interpolate({
-            inputRange: [0, 1],
-            outputRange: [0, 20],
-          }),
-        }],
       }]}
       >
         <TouchableOpacity
@@ -29,7 +23,7 @@ export const DoneButton = ({
           onPress={isDoneBtnShow ? onDoneBtnClick : onNextBtnClick}
         >
           <Text style={[styles.controllText, {
-            color: rightTextColor, paddingRight: 30,
+            color: rightTextColor
           }]}>
             {doneBtnLabel}
           </Text>
